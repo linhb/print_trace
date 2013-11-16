@@ -4,3 +4,6 @@ Signal.trap("USR1") do
     f.write(Thread.current.backtrace.join("\n"))    
   end
 end
+def print_trace(pid)
+  Process.kill("USR1", pid)
+end
