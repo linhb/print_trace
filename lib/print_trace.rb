@@ -2,7 +2,7 @@ Signal.trap("USR1") do
   trace = Thread.current.backtrace.join("\n")
   puts trace
   File.open(File.join(Rails.root, "log", "print_trace.log"), "a") do |f|
-    f.write("****** #{Time.now} ******")
+    f.write("****** #{Time.now} ******\n")
     f.write(trace)    
   end
 end
