@@ -28,3 +28,9 @@ Then navigate to your Rails directory and do
 `cat log/print_trace.log`
 
 You may want to do `tail -f log/print_trace.log` to see a running log as you print the trace repeatedly.
+
+## Troubleshooting
+
+`Errno::EPERM: Operation not permitted`
+
+The Ruby process you're trying to look at belongs to a different user. Log in as either that user or root and try again.
